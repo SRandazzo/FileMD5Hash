@@ -41,7 +41,10 @@
 // Function declaration
 //---------------------------------------------------------
 
-FILEMD5HASH_EXTERN CFStringRef FileMD5HashCreateWithPath(CFStringRef filePath, 
+#ifndef FILEMD5HASH_EXTERN
+#define FILEMD5HASH_EXTERN extern
+
+FILEMD5HASH_EXTERN CFStringRef FileMD5HashCreateWithPath(CFStringRef filePath,
                                                          size_t chunkSizeForReadingData);
 
 
